@@ -58,7 +58,7 @@ class mongodb::repo (
           'Ubuntu' => "https://${repo_domain}/apt/ubuntu",
           default  => undef
         }
-        $release     = "${::lsbdistcodename}/${repo_path}/${mongover[0]}.${mongover[1]}"
+        $release     = "xenial/${repo_path}/${mongover[0]}.${mongover[1]}"
         $repos       = $::operatingsystem ? {
           'Debian' => 'main',
           'Ubuntu' => 'multiverse',
